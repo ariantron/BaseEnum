@@ -49,12 +49,12 @@ abstract class BaseEnum
         return in_array($value, $values, $strict);
     }
 
-    public static function toString($val): int|string
+    public static function getName($value): int|string
     {
         $tmp = new ReflectionClass(get_called_class());
         $a = $tmp->getConstants();
         $b = array_flip($a);
 
-        return $b[$val];
+        return $b[$value];
     }
 }
