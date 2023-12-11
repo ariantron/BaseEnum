@@ -23,11 +23,11 @@ namespace App\Enums;
 
 use ArianTron\BaseEnum\BaseEnum;
 
-class MyEnum extends BaseEnum
+class Numbers extends BaseEnum
 {
-    const VALUE_ONE = 'one';
-    const VALUE_TWO = 'two';
-    const VALUE_THREE = 'three';
+    const ONE = 'one';
+    const TWO = 'two';
+    const THREE = 'three';
 }
 ```
 
@@ -45,7 +45,7 @@ Retrieve an array of all constants defined in the Enum class.
 
 Check if the given `$value` is a valid constant value within the Enum. By default, the check is strict (both value and type), but you can set `$strict` to `false` for a loose check.
 
-#### `toString($val): int|string`
+#### `getName($val): int|string`
 
 Convert the Enum constant value back to its corresponding constant name.
 
@@ -53,16 +53,18 @@ Convert the Enum constant value back to its corresponding constant name.
 
 ```php
 // Check if a name is a valid constant in the Enum
-$result = MyEnum::isValidName('VALUE_TWO'); // true
+$result = MyEnum::isValidName('TWO'); // true
 
 // Get all constants in the Enum
-$constants = MyEnum::getConstants(); // ['VALUE_ONE' => 'one', 'VALUE_TWO' => 'two', 'VALUE_THREE' => 'three']
+$constants = MyEnum::getConstants(); // ['one','two','three']
 
 // Check if a value is a valid constant value in the Enum
 $result = MyEnum::isValidValue('two'); // true
 
 // Convert a constant value back to its name
-$name = MyEnum::toString('two'); // 'VALUE_TWO'
+$name_1 = Numbers::getName('two'); // 'TWO'
+//or
+$name_2 = Numbers::getName(Numbers::TWO); // 'TWO'
 ```
 
 ## Contribution
