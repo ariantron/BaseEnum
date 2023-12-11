@@ -53,13 +53,13 @@ Convert the Enum constant value back to its corresponding constant name.
 
 ```php
 // Check if a name is a valid constant in the Enum
-$result = MyEnum::isValidName('TWO'); // true
+$result = Numbers::isValidName('TWO'); // true
 
 // Get all constants in the Enum
-$constants = MyEnum::getConstants(); // ['one','two','three']
+$constants = Numbers::getConstants(); // ['one','two','three']
 
 // Check if a value is a valid constant value in the Enum
-$result = MyEnum::isValidValue('two'); // true
+$result = Numbers::isValidValue('two'); // true
 
 // Convert a constant value back to its name
 $name_1 = Numbers::getName('two'); // 'TWO'
