@@ -1,0 +1,18 @@
+{
+    "name": "ariantron/base-enum",
+    "description": "A superclass for Enum class creation with more functionalities",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ArianTron\\BaseEnum\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arian Tron",
+            "email": "ariantron@yahoo.com"
+        }
+    ],
+    "require": {}
+}
